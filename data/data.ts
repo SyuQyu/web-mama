@@ -5,7 +5,7 @@ export const sevenProData = [
         "category": "Parfum",
         "product": "Sevenpro",
         "price": 100000,
-        img1: "/image/sevenPro/sevenproparfume.jpeg",
+        img1: "/image/sevenPro/parfume2.jpg",
         img2: "/image/sevenPro/sevenproparfume.jpeg",
         "description": "Parfum dengan tiga varian aroma: Green, White, dan Blue. Memiliki ketahanan hingga 12 jam dalam ruangan ber-AC dan 6 jam di luar ruangan.",
         "details": "Sevenpro Parfum memiliki keunggulan seperti ketahanan aroma yang lama, tidak mengandung methanol, dan telah terdaftar di BPOM. Tersedia dalam varian Green (Warm Spicy, Leather, Amber), White (Citrus, Cinnamon, Fresh Green), dan Blue (Ripe Fruit, Bergamot, Lavender)."
@@ -16,8 +16,8 @@ export const sevenProData = [
         "category": "Skincare",
         "product": "Sevenpro",
         "price": 100000,
-        img1: "/image/sevenPro/sevenproparfume.jpeg",
-        img2: "/image/sevenPro/sevenproparfume.jpeg",
+        img1: "/image/sevenPro/serum3.jpg",
+        img2: "/image/sevenPro/serum2.jpeg",
         "description": "Serum dengan konsentrasi bahan aktif tinggi yang membantu hidrasi mendalam, memperbaiki tekstur kulit, dan menyamarkan noda hitam.",
         "details": "Sevenpro Serum mengandung bahan-bahan alami seperti Licorice, Green Tea, Niacinamide, Aloe Vera, Kolagen, Witch Hazel, dan Centella Asiatica yang bekerja efektif dalam menjaga kesehatan dan kelembapan kulit. Aman digunakan oleh semua jenis kulit, termasuk ibu hamil. Hasil optimal terlihat dalam 14 hari penggunaan rutin."
     }

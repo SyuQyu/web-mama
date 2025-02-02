@@ -12,6 +12,8 @@ import Pagination from "../../components/Util/Pagination";
 import { apiProductsType, itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
 import { msiData, mdData, sevenProData } from "../../data/data";
+import TestiSlider from "../../components/TestiSlider2/TestiSlider2";
+import Button from "../../components/Buttons/Button";
 type OrderType = "latest" | "price" | "price-desc";
 
 type Props = {
@@ -248,8 +250,15 @@ const ProductCategory: React.FC<Props> = ({
           </div>
         </div>
 
+        {/* ===== Testimonial Section ===== */}
+        <div className="w-full py-5">
+          <div className="app-x-padding app-max-width w-full mt-8 border-b-2 border-gray100">
+            <TestiSlider />
+          </div>
+        </div>
+
         {/* ===== Main Content Section ===== */}
-        <div className="app-x-padding app-max-width mt-3 mb-14">
+        <div className="app-x-padding app-max-width my-16">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
             {data.map((item: any) => (
               <Card key={item.id} item={item} />
@@ -257,6 +266,18 @@ const ProductCategory: React.FC<Props> = ({
           </div>
         </div>
       </main>
+
+      <div className="bg-lightgreen h-full py-4 w-full flex items-center">
+        <div className="app-x-padding app-max-width w-full">
+          <div className="w-full text-center flex flex-col justify-center items-center gap-6">
+            <div>
+              <h2 className="text-3xl mb-4">Join Grup Telegram</h2>
+              <span>Join grup telegram untuk mendapatkan info lebih detail dan cara bergabung</span>
+            </div>
+            <Button value="Join" />
+          </div>
+        </div>
+      </div>
 
       {/* ===== Footer Section ===== */}
       <Footer />

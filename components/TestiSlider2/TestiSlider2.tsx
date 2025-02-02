@@ -82,26 +82,26 @@ const testi = [
   },
 ];
 
-// animate__fadeIn
-// animate__lightSpeedInRight
+const ITEMS_PER_SLIDE = 4;
+
 const TestiSlider: FC = () => {
   const [arrIndex, setArrIndex] = useState(0);
   const [animate, setAnimate] = useState("animate__lightSpeedInRight");
 
   const handleNext = useCallback(() => {
-    if (arrIndex === testi.length - 1) {
+    if (arrIndex + ITEMS_PER_SLIDE >= testi.length) {
       setArrIndex(0);
     } else {
-      setArrIndex((prevState) => prevState + 1);
+      setArrIndex((prevState) => prevState + ITEMS_PER_SLIDE);
       setAnimate("animate__lightSpeedInRight");
     }
   }, [arrIndex]);
 
   const handlePrev = () => {
     if (arrIndex === 0) {
-      setArrIndex(testi.length - 1);
+      setArrIndex(testi.length - ITEMS_PER_SLIDE);
     } else {
-      setArrIndex((prevState) => prevState - 1);
+      setArrIndex((prevState) => prevState - ITEMS_PER_SLIDE);
       setAnimate("animate__lightSpeedInLeft");
     }
   };
@@ -112,38 +112,31 @@ const TestiSlider: FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, [handleNext]);
+
   return (
-    <div
-      className="flex flex-1 overflow-hidden relative my-6"
-      style={{ width: "700px" }}
-    >
-      <div className="slide-section min-w-min h-40 flex">
-        {testi.map((ti, index) => {
-          return (
-            index === arrIndex && (
-              <div
-                key={ti.name}
-                className={`h-full flex flex-col items-center justify-center animate__animated ${animate}`}
-                style={{ width: "700px" }}
-              >
-                <div className="textiContainer text-center w-3/4">
-                  <span>{ti.speech}</span>
-                  <h3 className="font-bold mt-6">{ti.name}</h3>
-                  <span className="text-sm">({ti.occupation})</span>
-                </div>
-              </div>
-            )
-          );
-        })}
+    <div className="flex flex-1 overflow-hidden relative my-6 w-full">
+      <div className="slide-section h-full grid grid-cols-4">
+        {testi.slice(arrIndex, arrIndex + ITEMS_PER_SLIDE).map((ti) => (
+          <div
+            key={ti.name}
+            className={`h-full flex flex-col items-center justify-center animate__animated ${animate}`}
+          >
+            <div className="textiContainer text-center w-3/4">
+              <span>{ti.speech}</span>
+              <h3 className="font-bold mt-6">{ti.name}</h3>
+              <span className="text-sm">({ti.occupation})</span>
+            </div>
+          </div>
+        ))}
       </div>
       <span
-        className="absolute top-1/3 left-3 hover:bg-gray200 rounded-full p-2 cursor-pointer outline-none"
+        className="absolute top-1/3 left-3 hover:bg-grey200 rounded-full p-2 cursor-pointer outline-none"
         onClick={handlePrev}
       >
         <LeftArrow />
       </span>
       <span
-        className="absolute top-1/3 right-5 hover:bg-gray200 rounded-full p-2 cursor-pointer outline-none"
+        className="absolute top-1/3 right-5 hover:bg-grey200 rounded-full p-2 cursor-pointer outline-none"
         onClick={handleNext}
       >
         <RightArrow />
