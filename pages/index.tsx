@@ -14,6 +14,7 @@ import TestiSlider from "../components/TestiSlider/TestiSlider";
 import { apiProductsType, itemType } from "../context/cart/cart-types";
 import LinkButton from "../components/Buttons/LinkButton";
 import { msiData, mdData, sevenProData } from "../data/data";
+import { FaWhatsapp } from "react-icons/fa";
 // /bg-img/ourshop.png
 import ourShop from "../public/bg-img/ourshop.png";
 
@@ -93,8 +94,7 @@ const Home: React.FC<Props> = ({ products }) => {
 
       {/* ===== Carousel Section ===== */}
       <Slideshow />
-
-      <main id="main-content" className="-mt-20">
+      <main id="main-content" className="-mt-20 relative">
         {/* ===== Category Section ===== */}
         <section className="w-full h-auto py-10 border border-b-2 border-gray100">
           <div className="app-max-width app-x-padding h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

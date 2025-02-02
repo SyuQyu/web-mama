@@ -2,10 +2,10 @@ const withPWA = require("next-pwa");
 
 module.exports = withPWA({
   // module.exports = {
-  i18n: {
-    locales: ["en", "id"],
-    defaultLocale: "id",
-  },
+  // i18n: {
+  //   locales: ["en", "id"],
+  //   defaultLocale: "id",
+  // },
   reactStrictMode: true,
   // swcMinify: true,
   // compiler: {

@@ -1,22 +1,27 @@
 export const sevenProData = [
     {
-        id: 1,
-        name: "SevenPro Parfum",
-        category: "Parfum",
-        product: "SevenPro",
-        price: 250000,
+        "id": 1,
+        "name": "SEVENPRO PARFUM",
+        "category": "Parfum",
+        "product": "Sevenpro",
+        "price": 100000,
         img1: "/image/sevenPro/sevenproparfume.jpeg",
         img2: "/image/sevenPro/sevenproparfume.jpeg",
+        "description": "Parfum dengan tiga varian aroma: Green, White, dan Blue. Memiliki ketahanan hingga 12 jam dalam ruangan ber-AC dan 6 jam di luar ruangan.",
+        "details": "Sevenpro Parfum memiliki keunggulan seperti ketahanan aroma yang lama, tidak mengandung methanol, dan telah terdaftar di BPOM. Tersedia dalam varian Green (Warm Spicy, Leather, Amber), White (Citrus, Cinnamon, Fresh Green), dan Blue (Ripe Fruit, Bergamot, Lavender)."
     },
     {
-        id: 2,
-        name: "SevenPro Serum",
-        category: "Parfum",
-        product: "SevenPro",
-        price: 250000,
-        img1: "https://sevenpro.co.id/wp-content/uploads/2023/01/sevenpro-2.jpg",
-        img2: "https://sevenpro.co.id/wp-content/uploads/2023/01/sevenpro-2-2.jpg",
+        "id": 2,
+        "name": "SEVENPRO SERUM",
+        "category": "Skincare",
+        "product": "Sevenpro",
+        "price": 100000,
+        img1: "/image/sevenPro/sevenproparfume.jpeg",
+        img2: "/image/sevenPro/sevenproparfume.jpeg",
+        "description": "Serum dengan konsentrasi bahan aktif tinggi yang membantu hidrasi mendalam, memperbaiki tekstur kulit, dan menyamarkan noda hitam.",
+        "details": "Sevenpro Serum mengandung bahan-bahan alami seperti Licorice, Green Tea, Niacinamide, Aloe Vera, Kolagen, Witch Hazel, dan Centella Asiatica yang bekerja efektif dalam menjaga kesehatan dan kelembapan kulit. Aman digunakan oleh semua jenis kulit, termasuk ibu hamil. Hasil optimal terlihat dalam 14 hari penggunaan rutin."
     }
+
 ]
 
 export const mdData = [

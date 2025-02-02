@@ -1,20 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { GetServerSideProps } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useTranslations } from "next-intl";
-import axios from "axios";
-
-import Heart from "../../public/icons/Heart";
 import DownArrow from "../../public/icons/DownArrow";
-import FacebookLogo from "../../public/icons/FacebookLogo";
-import InstagramLogo from "../../public/icons/InstagramLogo";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import GhostButton from "../../components/Buttons/GhostButton";
-import Button from "../../components/Buttons/Button";
-import Card from "../../components/Card/Card";
+import { FaWhatsapp } from "react-icons/fa";
 
 // swiperjs
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -37,7 +29,7 @@ type Props = {
   products1: itemType[];
 };
 
-const Product: React.FC<Props> = ({ product1, products1 }) => {
+const Product: React.FC<Props> = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -78,10 +70,7 @@ const Product: React.FC<Props> = ({ product1, products1 }) => {
     categoryName: "unknown",
   }, [result]);
 
-  const [size, setSize] = useState("M");
   const [mainImg, setMainImg] = useState(product.img1);
-  const [currentQty, setCurrentQty] = useState(1);
-  const t = useTranslations("Category");
 
   useEffect(() => {
     setMainImg(product.img1);
@@ -201,10 +190,10 @@ const Product: React.FC<Props> = ({ product1, products1 }) => {
                 </>
               )}
             </Disclosure>
-            <div className="flex items-center space-x-4 mt-4">
-              <span>Hubungi</span>
-              <WhatsAppLogo extraClass="h-4 cursor-pointer text-gray400 hover:text-gray500" />
-            </div>
+            <a href={`https://wa.me/11234567890?text=Hi%2C%20saya%20tertarik%20terhadap%20${encodeURIComponent(product.name)}%20produk.`} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 mt-4">
+              <span className="font-semibold">Hubungi</span>
+              <FaWhatsapp className="text-xl cursor-pointer text-green font-bold hover:text-gray500" />
+            </a>
           </div>
         </div>
         {/* ===== Horizontal Divider ===== */}

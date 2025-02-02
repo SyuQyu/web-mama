@@ -208,7 +208,6 @@ const ProductCategory: React.FC<Props> = ({
   const numberOfProducts = 20;
   const page = 1;
 
-  const t = useTranslations("Category");
 
   const router = useRouter();
   const { category } = router.query;
