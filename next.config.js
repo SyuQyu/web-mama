@@ -12,7 +12,7 @@ module.exports = withPWA({
   //   removeConsole: true,
   // },
   images: {
-    domains: ["via.placeholder.com", "picsum.photos", "mymsi.co.id", "mudahdigital.id", "sevenpro.co.id"],
+    domains: ["via.placeholder.com", "picsum.photos", "mymsi.co.id", "mudahdigital.id", "sevenpro.co.id", "images.unsplash.com"],
   },
   pwa: {
     dest: "public",

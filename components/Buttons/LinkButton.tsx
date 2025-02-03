@@ -34,11 +34,10 @@ const LinkButton: FC<Props> = ({
       <a
         role="button"
         aria-label={aria_label}
-        className={`bg-white group text-center inline-block cursor-pointe ${
-          inverted
-            ? "hover:bg-gray500 hover:text-gray100"
-            : "hover:text-gray400"
-        } ${!noBorder && "border border-gray500"} ${btnSize} ${extraClass}`}
+        className={`bg-gray500 group text-white text-center inline-block cursor-pointe ${inverted
+          ? "hover:bg-gray500 hover:text-gray100"
+          : "hover:text-gray400"
+          } ${!noBorder && "border border-gray500"} ${btnSize} ${extraClass}`}
       >
         {children}
       </a>

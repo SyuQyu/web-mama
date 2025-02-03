@@ -14,7 +14,7 @@ const defaultKeywords =
   "Haru Fashion, Online Shop, E-commerce, Sat Naing, NextJS";
 
 const AppHeader: React.FC<Props> = ({
-  title = "Haru Fashion",
+  title = "Erni Products",
   desc = defaultDesc,
   keywords = defaultKeywords,
 }) => {

@@ -82,7 +82,7 @@ const testi = [
   },
 ];
 
-const ITEMS_PER_SLIDE = 4;
+const ITEMS_PER_SLIDE = 1;
 
 const TestiSlider: FC = () => {
   const [arrIndex, setArrIndex] = useState(0);
@@ -114,8 +114,8 @@ const TestiSlider: FC = () => {
   }, [handleNext]);
 
   return (
-    <div className="flex flex-1 overflow-hidden relative my-6 w-full">
-      <div className="slide-section h-full grid grid-cols-4">
+    <div className=" overflow-hidden relative my-6 w-full">
+      <div className="slide-section h-full grid grid-cols-1">
         {testi.slice(arrIndex, arrIndex + ITEMS_PER_SLIDE).map((ti) => (
           <div
             key={ti.name}

@@ -79,7 +79,7 @@ const Product: React.FC<Props> = () => {
   return (
     <div>
       {/* ===== Head Section ===== */}
-      <Header title={`${product.name} - Haru Fashion`} />
+      <Header title={`${product.name} - Erni Products`} />
 
       <main id="main-content">
         {/* ===== Breadcrumb Section ===== */}
@@ -190,7 +190,7 @@ const Product: React.FC<Props> = () => {
                 </>
               )}
             </Disclosure>
-            <a href={`https://wa.me/11234567890?text=Hi%2C%20saya%20tertarik%20terhadap%20${encodeURIComponent(product.name)}%20produk.`} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 mt-4">
+            <a href={`https://wa.me/+6281210033714?text=Hi%2C%20saya%20tertarik%20terhadap%20${encodeURIComponent(product.name)}%20produk.`} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 mt-4">
               <span className="font-semibold">Hubungi</span>
               <FaWhatsapp className="text-xl cursor-pointer text-green font-bold hover:text-gray500" />
             </a>

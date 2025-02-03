@@ -14,8 +14,9 @@ import DownArrow from "../../public/icons/DownArrow";
 import { msiData, mdData, sevenProData } from "../../data/data";
 import TestiSlider from "../../components/TestiSlider2/TestiSlider2";
 import Button from "../../components/Buttons/Button";
+import LinkButton from "../../components/Buttons/LinkButton";
 type OrderType = "latest" | "price" | "price-desc";
-
+import Image from "next/image";
 type Props = {
   items1: itemType[];
 };
@@ -23,190 +24,6 @@ type Props = {
 const ProductCategory: React.FC<Props> = ({
   items1,
 }) => {
-
-  const items = [
-    {
-      "id": 1,
-      "name": "Classic White T-Shirt",
-      "price": 150000,
-      "category": "t-shirts",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-01T12:00:00Z"
-    },
-    {
-      "id": 2,
-      "name": "Denim Jacket",
-      "price": 350000,
-      "category": "jackets",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-02T12:00:00Z"
-    },
-    {
-      "id": 3,
-      "name": "Casual Sneakers",
-      "price": 500000,
-      "category": "shoes",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-03T12:00:00Z"
-    },
-    {
-      "id": 4,
-      "name": "Leather Wallet",
-      "price": 250000,
-      "category": "accessories",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-04T12:00:00Z"
-    },
-    {
-      "id": 5,
-      "name": "Summer Dress",
-      "price": 300000,
-      "category": "dresses",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-05T12:00:00Z"
-    },
-    {
-      "id": 6,
-      "name": "Black Hoodie",
-      "price": 200000,
-      "category": "hoodies",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-06T12:00:00Z"
-    },
-    {
-      "id": 7,
-      "name": "Leather Boots",
-      "price": 600000,
-      "category": "shoes",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-07T12:00:00Z"
-    },
-    {
-      "id": 8,
-      "name": "Blue Jeans",
-      "price": 220000,
-      "category": "pants",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-08T12:00:00Z"
-    },
-    {
-      "id": 9,
-      "name": "Floral Skirt",
-      "price": 180000,
-      "category": "skirts",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-09T12:00:00Z"
-    },
-    {
-      "id": 10,
-      "name": "Round Sunglasses",
-      "price": 120000,
-      "category": "accessories",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-10T12:00:00Z"
-    },
-    {
-      "id": 11,
-      "name": "Red Scarf",
-      "price": 80000,
-      "category": "accessories",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-11T12:00:00Z"
-    },
-    {
-      "id": 12,
-      "name": "Winter Coat",
-      "price": 750000,
-      "category": "jackets",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-12T12:00:00Z"
-    },
-    {
-      "id": 13,
-      "name": "Chino Pants",
-      "price": 260000,
-      "category": "pants",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-13T12:00:00Z"
-    },
-    {
-      "id": 14,
-      "name": "White Sneakers",
-      "price": 550000,
-      "category": "shoes",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-14T12:00:00Z"
-    },
-    {
-      "id": 15,
-      "name": "Tank Top",
-      "price": 100000,
-      "category": "t-shirts",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-15T12:00:00Z"
-    },
-    {
-      "id": 16,
-      "name": "Plaid Shirt",
-      "price": 170000,
-      "category": "shirts",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-16T12:00:00Z"
-    },
-    {
-      "id": 17,
-      "name": "Grey Hoodie",
-      "price": 200000,
-      "category": "hoodies",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-17T12:00:00Z"
-    },
-    {
-      "id": 18,
-      "name": "Belt Bag",
-      "price": 150000,
-      "category": "accessories",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-18T12:00:00Z"
-    },
-    {
-      "id": 19,
-      "name": "Sports Shorts",
-      "price": 120000,
-      "category": "pants",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-19T12:00:00Z"
-    },
-    {
-      "id": 20,
-      "name": "Knit Beanie",
-      "price": 95000,
-      "category": "accessories",
-      "img1": "https://picsum.photos/200/300",
-      "img2": "https://picsum.photos/200/300",
-      "createdAt": "2024-01-20T12:00:00Z"
-    }
-  ]
-
   const numberOfProducts = 20;
   const page = 1;
 
@@ -225,10 +42,39 @@ const ProductCategory: React.FC<Props> = ({
     : "Category"; // Default value
 
   const data = category === "msi" ? msiData : category === "mudahdigital" ? mdData : sevenProData;
+  const imagesSevenPro = [
+    '/image/sevenPro/testi/1.jpg',
+    '/image/sevenPro/testi/2.jpg',
+    '/image/sevenPro/testi/3.jpg',
+    '/image/sevenPro/testi/4.jpg',
+    '/image/sevenPro/testi/5.jpg',
+    '/image/sevenPro/testi/6.jpg',
+  ];
+
+  const imagesMD = [
+    '/image/sevenPro/testi/1.jpg',
+    '/image/sevenPro/testi/2.jpg',
+    '/image/sevenPro/testi/3.jpg',
+    '/image/sevenPro/testi/4.jpg',
+    '/image/sevenPro/testi/5.jpg',
+    '/image/sevenPro/testi/6.jpg',
+  ];
+
+  const imagesMSI = [
+    '/image/sevenPro/testi/1.jpg',
+    '/image/sevenPro/testi/2.jpg',
+    '/image/sevenPro/testi/3.jpg',
+    '/image/sevenPro/testi/4.jpg',
+    '/image/sevenPro/testi/5.jpg',
+    '/image/sevenPro/testi/6.jpg',
+  ];
+
+  const images = category === "msi" ? imagesMSI : category === "mudahdigital" ? imagesMD : imagesSevenPro;
+  const link = category === "msi" ? "https://t.me/joinbisnis250k" : category === "mudahdigital" ? "https://t.me/+-rNL61Mnn8I1OGM9" : "https://t.me/sevenproernisjrabadi";
   return (
     <div>
       {/* ===== Head Section ===== */}
-      <Header title={`${capitalizedCategory} - Haru Fashion`} />
+      <Header title={`${capitalizedCategory} - Erni Products`} />
 
       <main id="main-content">
         {/* ===== Breadcrumb Section ===== */}
@@ -253,12 +99,43 @@ const ProductCategory: React.FC<Props> = ({
         {/* ===== Testimonial Section ===== */}
         <div className="w-full py-5">
           <div className="app-x-padding app-max-width w-full mt-8 border-b-2 border-gray100">
-            <TestiSlider />
+            {/* <TestiSlider /> */}
+            <h2 className="text-xl md:text-3xl text-center mb-4">Testimonial</h2>
+            <div className="max-w-screen-2xl mx-auto px-4 pb-12 bg-gray-50">
+              <div className="md:flex hidden flex-col md:flex-row gap-2">
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="flex flex-1">
+                    <Image src={images[0]} alt="Image 1" width={600} height={400} className="object-cover w-full h-full" />
+                  </div>
+                  <div className="hidden md:flex flex-1 flex-row gap-2">
+                    <Image src={images[1]} alt="Image 2" width={300} height={200} className="object-cover w-full h-full" />
+                    <Image src={images[2]} alt="Image 3" width={300} height={200} className="object-cover w-full h-full" />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="hidden md:flex flex-1 flex-row gap-2">
+                    <Image src={images[3]} alt="Image 4" width={300} height={200} className="object-cover w-full h-full" />
+                    <Image src={images[4]} alt="Image 5" width={300} height={200} className="object-cover w-full h-full" />
+                  </div>
+                  <div className="flex flex-1">
+                    <Image src={images[5]} alt="Image 6" width={600} height={400} className="object-cover w-full h-full" />
+                  </div>
+                </div>
+              </div>
+              <div className="md:hidden flex flex-col gap-2">
+                {images.map((src, index) => (
+                  <div key={index} className="flex flex-1">
+                    <Image src={src} alt={`Image ${index + 1}`} width={600} height={400} className="object-cover w-full h-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* ===== Main Content Section ===== */}
         <div className="app-x-padding app-max-width my-16">
+          <h2 className="text-xl md:text-3xl text-center mb-4">Produk</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
             {data.map((item: any) => (
               <Card key={item.id} item={item} />
@@ -271,10 +148,10 @@ const ProductCategory: React.FC<Props> = ({
         <div className="app-x-padding app-max-width w-full">
           <div className="w-full text-center flex flex-col justify-center items-center gap-6">
             <div>
-              <h2 className="text-3xl mb-4">Join Grup Telegram</h2>
-              <span>Join grup telegram untuk mendapatkan info lebih detail dan cara bergabung</span>
+              <h2 className="text-xl md:text-3xl mb-4">Join Grup Telegram</h2>
+              <span className="text-base md:text-lg">Join grup telegram untuk mendapatkan info lebih detail dan cara bergabung</span>
             </div>
-            <Button value="Join" />
+            <LinkButton href={link}>Join</LinkButton>
           </div>
         </div>
       </div>

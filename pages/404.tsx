@@ -8,7 +8,7 @@ import { GetStaticProps } from "next";
 const Custom404 = () => {
   return (
     <>
-      <AppHeader title="Page Not Found - Haru Fashion" />
+      <AppHeader title="Page Not Found - Erni Products" />
       <div className="flex flex-col h-screen justify-center items-center">
         <h1 className="text-2xl">Halaman tidak ditemukan</h1>
         <Image

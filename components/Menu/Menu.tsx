@@ -89,10 +89,10 @@ export default function Menu() {
                     <a>
                       <Image
                         className="justify-center"
-                        src="/logo.svg"
+                        src="/image/ERNI_LOGO.png"
                         alt="Picture of the author"
                         width={85}
-                        height={22}
+                        height={32}
                       />
                     </a>
                   </Link>
@@ -119,61 +119,36 @@ export default function Menu() {
                         onChange={handleChange}
                       />
                     </form>
-                    <Link href="/product-category/men">
+                    <Link href="/product-category/mudahdigital">
                       <a
                         className="w-full text-xl hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
-                        men
+                        Mudahdigital
                       </a>
                     </Link>
-                    <Link href="/product-category/women">
+                    <Link href="/product-category/seven-pro">
                       <a
                         className="w-full text-xl hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
-                        women
+                        SevenPro
                       </a>
                     </Link>
-                    <Link href="/product-category/bags">
+                    <Link href="/product-category/msi">
                       <a
                         className="w-full text-xl hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
-                        bags
+                        MSI
                       </a>
                     </Link>
-                    <Link href="/blogs">
-                      <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
-                        onClick={closeModal}
-                      >
-                        blogs
-                      </a>
-                    </Link>
-                    <Link href="/about">
-                      <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
-                        onClick={closeModal}
-                      >
-                        about_us
-                      </a>
-                    </Link>
-                    <Link href="/contact">
-                      <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
-                        onClick={closeModal}
-                      >
-                        contact_us
-                      </a>
-                    </Link>
-                    <hr className="border border-gray300 w-full mt-2" />
                     <div className="w-full text-xl py-2 my-3 flex justify-between">
                     </div>
                     <hr className="border border-gray300 w-full" />
-                    <Link href="/wishlist">
+                    <Link href="#">
                       <a className="text-xl py-2 my-3 w-full flex justify-between">
-                        <span>wishlist</span>
+                        <span>made with love</span>
                         <div className="relative">
                           <WhistlistIcon />
                           {noOfWishlist > 0 && (
@@ -189,46 +164,6 @@ export default function Menu() {
                     <hr className="border border-gray300 w-full" />
 
                     {/* Currency Dropdown */}
-                    <HMenu as="div" className="relative bg-gray100 my-2 w-full">
-                      <HMenu.Button
-                        as="a"
-                        href="#"
-                        className="flex justify-center items-center py-2 px-4 text-center"
-                      >
-                        usd <DownArrow />
-                      </HMenu.Button>
-                      <HMenu.Items
-                        className="flex flex-col w-full right-0 absolute p-1 border border-gray200 bg-white mt-2 outline-none"
-                        style={{ zIndex: 9999 }}
-                      >
-                        <HMenu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={`${active
-                                ? "bg-gray100 text-gray500"
-                                : "bg-white text-gray500"
-                                } py-2 px-4 text-center focus:outline-none`}
-                            >
-                              usd
-                            </a>
-                          )}
-                        </HMenu.Item>
-                        <HMenu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={`${active
-                                ? "bg-gray100 text-gray500"
-                                : "bg-white text-gray500"
-                                } py-2 px-4 text-center focus:outline-none`}
-                            >
-                              mmk
-                            </a>
-                          )}
-                        </HMenu.Item>
-                      </HMenu.Items>
-                    </HMenu>
 
                     <div className="flex my-10 w-2/5 space-x-6 justify-center">
                       <a
