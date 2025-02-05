@@ -156,10 +156,10 @@ const Home: React.FC<Props> = ({ products }) => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-4 lg:gap-x-12 gap-y-6 mb-10 app-x-padding">
+            <Card key={mdData[0].id} item={mdData[0]} />
             <Card key={mdData[1].id} item={mdData[1]} />
             <Card key={mdData[2].id} item={mdData[2]} />
             <Card key={mdData[3].id} item={mdData[3]} />
-            <Card key={mdData[4].id} item={mdData[4]} />
           </div>
           <div className="flex justify-center">
             <Button
@@ -198,10 +198,10 @@ const Home: React.FC<Props> = ({ products }) => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-4 lg:gap-x-12 gap-y-6 mb-10 app-x-padding">
+            <Card key={msiData[0].id} item={msiData[0]} />
             <Card key={msiData[1].id} item={msiData[1]} />
             <Card key={msiData[2].id} item={msiData[2]} />
             <Card key={msiData[3].id} item={msiData[3]} />
-            <Card key={msiData[4].id} item={msiData[4]} />
           </div>
           <div className="flex justify-center">
             <Button

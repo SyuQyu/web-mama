@@ -70,7 +70,7 @@ const ProductCategory: React.FC<Props> = ({
   ];
 
   const images = category === "msi" ? imagesMSI : category === "mudahdigital" ? imagesMD : imagesSevenPro;
-  const link = category === "msi" ? "https://t.me/joinbisnis250k" : category === "mudahdigital" ? "https://t.me/+-rNL61Mnn8I1OGM9" : "https://t.me/sevenproernisjrabadi";
+  const link = category === "msi" ? "https://t.me/joinbisnis250k" : category === "mudahdigital" ? "https://t.me/+-rNL61Mnn8I1OGM9" : "https://t.me/joinbisnis100ribu";
   return (
     <div>
       {/* ===== Head Section ===== */}

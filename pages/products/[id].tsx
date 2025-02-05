@@ -168,9 +168,13 @@ const Product: React.FC<Props> = () => {
           </div>
           <div className="infoSection w-full md:w-1/2 h-auto py-8 sm:pl-4 flex flex-col">
             <h1 className="text-3xl mb-4">{product.name}</h1>
-            <span className="text-2xl text-gray400 mb-2">
-              {formatRupiah(product.price)}
-            </span>
+            {
+              product?.price && (
+                <span className="text-2xl text-gray400 mb-2">
+                  {formatRupiah(product.price)}
+                </span>
+              )
+            }
             <span className="mb-2 text-justify">{product.description}</span>
             <Disclosure>
               {({ open }) => (

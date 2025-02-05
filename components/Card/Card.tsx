@@ -64,23 +64,17 @@ const Card: FC<Props> = ({ item }) => {
             )}
           </a>
         </Link>
-        <button
-          type="button"
-          className="absolute top-2 right-2 p-1 rounded-full"
-          aria-label="Wishlist"
-          onClick={handleWishlist}
-          onMouseOver={() => setIsWLHovered(true)}
-          onMouseLeave={() => setIsWLHovered(false)}
-        >
-          {isWLHovered || alreadyWishlisted ? <HeartSolid /> : <Heart />}
-        </button>
       </div>
 
       <div className="content">
         <Link href={itemLink}>
           <a className={styles.itemName}>{name}</a>
         </Link>
-        <div className="text-gray400">{formatRupiah(price)}</div>
+        {
+          price && (
+            <div className="text-gray400">{formatRupiah(price)}</div>
+          )
+        }
       </div>
     </div>
   );
